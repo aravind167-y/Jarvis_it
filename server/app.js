@@ -3,6 +3,8 @@ const app=express();
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const courseRoute = require('./routes/courseRoutes');
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 dotenv.config();
 const dns = require('dns');
